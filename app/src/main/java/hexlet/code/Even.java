@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.Math.round;
 
 public class Even {
-    public static void game(){
+    public static void game() {
         System.out.println("Welcome to the Brain Games!");
         Scanner scan = new Scanner(System.in);
         System.out.print("May I have your name? ");
@@ -39,6 +39,6 @@ public class Even {
                 System.out.println("Let's try again, " + name);
                 break;
             }
-            }
         }
     }
+}
