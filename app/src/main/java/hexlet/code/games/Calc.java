@@ -14,11 +14,11 @@ public class Calc {
         String op;
         int right = 0;
         String eq;
-        while (Engine.winCount != 3){
+        while (Engine.winCount != 3) {
             firstNumb = Engine.randNumber();
             secNumb = Engine.randNumber();
             op = Engine.operation();
-            System.out.println("Question: " + firstNumb + op + secNumb);
+            Engine.question(Integer.toString(firstNumb), Integer.toString(secNumb), op);
             if (op.equals("+")) {
                 right = firstNumb + secNumb;
             }

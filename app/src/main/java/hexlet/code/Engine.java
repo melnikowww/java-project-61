@@ -54,4 +54,10 @@ public class Engine {
     public static void congrats() {
         System.out.println("Congratulations, " + name + "!");
     }
+    public static void question(String data1, String data2) {
+        System.out.println("Question: " + data1 + " " + data2);
+    }
+    public static void question(String data1, String data2, String smthElse) {
+        System.out.println("Question: " + data1 + " " + smthElse + " " + data2);
+    }
 }

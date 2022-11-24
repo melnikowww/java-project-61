@@ -1,9 +1,6 @@
 package hexlet.code.games;
 
 import java.util.Scanner;
-
-import static java.lang.Math.E;
-import static java.lang.Math.round;
 import hexlet.code.Engine;
 
 public class Even {
