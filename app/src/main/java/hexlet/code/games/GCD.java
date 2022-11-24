@@ -28,6 +28,7 @@ public class GCD {
             }
             Engine.question(Integer.toString(big), Integer.toString(small));
             right = gcd(big, small);
+            Engine.answer();
             String answer = scan.next();
             if (answer.equals(Integer.toString(right))) {
                 Engine.rightAnswer();

@@ -28,6 +28,7 @@ public class Calc {
             if (op.equals("*")) {
                 right = firstNumb * secNumb;
             }
+            Engine.answer();
             String answer = scan.next();
             if (answer.equals(Integer.toString(right))) {
                 Engine.rightAnswer();

@@ -35,6 +35,18 @@ public class Engine {
         randomNumber = round(Math.random() * 100);
         return (int) randomNumber;
     }
+    public static int randNumber(int size) {
+        randomNumber = round(Math.random() * size);
+        return (int) randomNumber;
+    }
+    public static int randNumber(int start, int stop) {
+        randomNumber = round((Math.random() * (stop - start)) + start);
+        return (int) randomNumber;
+    }
+
+    public static void answer() {
+        System.out.print("Your answer: ");
+    }
     public static void rightAnswer() {
         System.out.println("Correct!");
         winCount++;
@@ -53,6 +65,9 @@ public class Engine {
     }
     public static void congrats() {
         System.out.println("Congratulations, " + name + "!");
+    }
+    public static void question(String data1) {
+        System.out.println("Question: " + data1);
     }
     public static void question(String data1, String data2) {
         System.out.println("Question: " + data1 + " " + data2);
