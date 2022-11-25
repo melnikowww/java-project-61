@@ -12,7 +12,7 @@ public class Even {
 
         while (Engine.winCount != 3) {
             quest = Engine.randNumber();
-            Engine.question(Integer.toString((int)quest));
+            Engine.question(Integer.toString((int) quest));
             Engine.answer();
             String answer = scan.next();
             if (((quest % 2 == 0) && (answer.equals("yes"))) || ((quest % 2 != 0) && (answer.equals("no")))) {
