@@ -75,4 +75,14 @@ public class Engine {
     public static void question(String data1, String data2, String smthElse) {
         System.out.println("Question: " + data1 + " " + smthElse + " " + data2);
     }
+    public static String primeTest(int x) {
+        String rightAnswer = "yes";
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0) {
+                rightAnswer = "no";
+                break;
+            }
+        }
+        return rightAnswer;
+    }
 }

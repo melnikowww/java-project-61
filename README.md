@@ -5,3 +5,4 @@
 [Calc_Game](https://asciinema.org/a/i67F5LDnWlrM5kUqEcQA14uH3)
 [GCD_Game](https://asciinema.org/a/JUNVZyaHLTfs4VcnjW50gZtZn)
 [Progression_Game](https://asciinema.org/a/GKPoBQ4F15eO7xllHiVHte7kO)
+[Prime_Game](https://asciinema.org/a/EeO8bAU4VkBeMsiNuHkxtiX55)
