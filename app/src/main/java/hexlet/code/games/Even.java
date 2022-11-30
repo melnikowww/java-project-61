@@ -30,6 +30,9 @@ public class Even {
                 Engine.incorrectAns();
                 break;
             }
+            if (Engine.winCount == 3) {
+                Engine.congrats();
+            }
         }
     }
 }
