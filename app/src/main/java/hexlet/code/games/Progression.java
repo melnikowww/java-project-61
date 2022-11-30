@@ -13,8 +13,9 @@ public class Progression {
         int step;
         int sizeOfProgression;
         int secretPlace;
+        int win_number = 3;
 
-        while (Engine.winCount != 3) {
+        while (Engine.winCount != win_number) {
             startNumber = Engine.randNumber();
             step = Engine.randNumber(10);
             sizeOfProgression = Engine.randNumber(5, 10);
@@ -41,7 +42,7 @@ public class Progression {
                 Engine.wrongAnswer(right, answer);
                 break;
             }
-            if (Engine.winCount == 3) {
+            if (Engine.winCount == win_number) {
                 Engine.congrats();
             }
         }

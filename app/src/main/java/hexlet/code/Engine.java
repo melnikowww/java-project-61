@@ -8,7 +8,7 @@ public class Engine {
     public static int operation;
     public static long randomNumber;
     public static int winCount = 0;
-    public static String question;
+    //public static String question;
     public static String name;
     public static void meet() {
         System.out.println("Welcome to the Brain Games!");
@@ -32,7 +32,8 @@ public class Engine {
         return result;
     }
     public static int randNumber() {
-        randomNumber = round(Math.random() * 100);
+        int range = 100;
+        randomNumber = round(Math.random() * range);
         return (int) randomNumber;
     }
     public static int randNumber(int size) {
@@ -55,10 +56,13 @@ public class Engine {
         System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
         System.out.println("Let's try again, " + Engine.name + "!");
     }
+    /*
     public static void wrongAnswer(int rightA, int wrongA) {
         System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
         System.out.println("Let's try again, " + Engine.name + "!");
     }
+
+     */
     public static void incorrectAns() {
         System.out.println("Incorrect answer ;(.");
         System.out.println("Let's try again, " + Engine.name);

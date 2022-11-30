@@ -15,8 +15,9 @@ public class GCD {
         int n1;
         int n2;
         int right;
+        int win_number = 3;
 
-        while (Engine.winCount != 3) {
+        while (Engine.winCount != win_number) {
             n1 = Engine.randNumber();
             n2 = Engine.randNumber();
             if (n1 > n2) {
@@ -37,7 +38,7 @@ public class GCD {
                 Engine.wrongAnswer(Integer.toString(right), answer);
                 break;
             }
-            if (Engine.winCount == 3) {
+            if (Engine.winCount == win_number) {
                 Engine.congrats();
             }
         }

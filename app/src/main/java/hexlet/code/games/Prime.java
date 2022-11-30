@@ -10,8 +10,9 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Scanner scan = new Scanner(System.in);
         int number;
+        int win_number = 3;
 
-        while (Engine.winCount != 3) {
+        while (Engine.winCount != win_number) {
             number = Engine.randNumber();
             Engine.question(Integer.toString(number));
             Engine.answer();
@@ -23,7 +24,7 @@ public class Prime {
                 Engine.wrongAnswer(rightAnswer, answer);
                 break;
             }
-            if (Engine.winCount == 3) {
+            if (Engine.winCount == win_number) {
                 Engine.congrats();
             }
         }

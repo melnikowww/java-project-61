@@ -13,8 +13,9 @@ public class Calc {
         int secNumb;
         String op;
         int right = 0;
-        String eq;
-        while (Engine.winCount != 3) {
+        int win_number = 3;
+        //String eq;
+        while (Engine.winCount != win_number) {
             firstNumb = Engine.randNumber();
             secNumb = Engine.randNumber();
             op = Engine.operation();
@@ -37,7 +38,7 @@ public class Calc {
                 Engine.wrongAnswer(Integer.toString(right), answer);
                 break;
             }
-            if (Engine.winCount == 3) {
+            if (Engine.winCount == win_number) {
                 Engine.congrats();
             }
         }

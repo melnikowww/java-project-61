@@ -9,8 +9,9 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scan = new Scanner(System.in);
         long quest;
+        int win_number = 3;
 
-        while (Engine.winCount != 3) {
+        while (Engine.winCount != win_number) {
             quest = Engine.randNumber();
             Engine.question(Integer.toString((int) quest));
             Engine.answer();
@@ -30,7 +31,7 @@ public class Even {
                 Engine.incorrectAns();
                 break;
             }
-            if (Engine.winCount == 3) {
+            if (Engine.winCount == win_number) {
                 Engine.congrats();
             }
         }
