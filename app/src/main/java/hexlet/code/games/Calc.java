@@ -4,10 +4,10 @@ import hexlet.code.Engine;
 public class Calc {
     public static void game() {
         String question = "What is the result of the expression?";
-        String[][] task = new String[3][2];
+        String[][] task = new String[Engine.rows][Engine.columns];
         String op;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.steps; i++) {
             op = Engine.operation();
             int x1 = Engine.randNumber();
             int x2 = Engine.randNumber();

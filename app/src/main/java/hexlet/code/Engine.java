@@ -5,10 +5,10 @@ import java.util.Scanner;
 import static java.lang.Math.round;
 
 public class Engine {
-    public static int operation;
-    public static long randomNumber;
-    public static int winCount = 0;
-    public static String name;
+    private static String name;
+    public static final int steps = 3;
+    public static final int rows = 3;
+    public static final int columns = 2;
     public static void meet() {
         System.out.println("Welcome to the Brain Games!");
         Scanner scan = new Scanner(System.in);
@@ -17,6 +17,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
     }
     public static String operation() {
+        int operation;
         operation = (int) round(Math.random() * 2);
         String result = "";
         if (operation == 0) {
@@ -31,21 +32,24 @@ public class Engine {
         return result;
     }
     public static int randNumber() {
+        long randomNumber;
         int range = 100;
         randomNumber = round(Math.random() * range);
         return (int) randomNumber;
     }
     public static int randNumber(int size) {
+        long randomNumber;
         randomNumber = round(Math.random() * size);
         return (int) randomNumber;
     }
     public static int randNumber(int start, int stop) {
+        long randomNumber;
         randomNumber = round((Math.random() * (stop - start)) + start);
         return (int) randomNumber;
     }
     public static void rightAnswer() {
         System.out.println("Correct!");
-        winCount++;
+        //winCount++;
     }
     public static void wrongAnswer(String rightA, String wrongA) {
         System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
@@ -69,9 +73,8 @@ public class Engine {
         meet();
         Scanner scan = new Scanner(System.in);
         String ans;
-        //int winNumber = 3;
         System.out.println(question);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < steps; i++) {
             System.out.println("Question: " + task[i][0]);
             System.out.print("Your answer: ");
             ans = scan.next();

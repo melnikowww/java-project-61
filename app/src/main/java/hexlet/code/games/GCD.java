@@ -4,12 +4,12 @@ import hexlet.code.Engine;
 public class GCD {
     public static void game() {
         String question = "Find the greatest common divisor of given numbers.";
-        String[][] task = new String[3][2];
+        String[][] task = new String[Engine.rows][Engine.columns];
         int x1;
         int x2;
         int big;
         int small;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.steps; i++) {
             x1 = Engine.randNumber();
             x2 = Engine.randNumber();
             if (x1 > x2) {

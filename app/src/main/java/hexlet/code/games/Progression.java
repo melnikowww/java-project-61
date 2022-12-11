@@ -5,16 +5,20 @@ import hexlet.code.Engine;
 public class Progression {
     public static void game() {
         String question = "What number is missing in the progression?";
-        String[][] task = new String[3][2];
+        String[][] task = new String[Engine.rows][Engine.columns];
         int startNumber;
         int step;
         int sizeOfProgression;
         int secretPlace;
+        int minSize = 5;
+        int maxSize = 5;
+        int minStep = 1;
+        int maxStep = 10;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < Engine.steps; i++) {
             startNumber = Engine.randNumber();
-            step = Engine.randNumber(1, 10);
-            sizeOfProgression = Engine.randNumber(5, 10);
+            step = Engine.randNumber(minStep, maxStep);
+            sizeOfProgression = Engine.randNumber(minSize, maxSize);
             secretPlace = Engine.randNumber(sizeOfProgression);
             task[i][0] = "";
 
