@@ -1,47 +1,28 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class GCD {
-
     public static void game() {
-        Engine.meet();
-        System.out.println("Find the greatest common divisor of given numbers.");
-        Scanner scan = new Scanner(System.in);
+        String question = "Find the greatest common divisor of given numbers.";
+        String[][] task = new String[3][2];
+        int x1;
+        int x2;
         int big;
         int small;
-        int n1;
-        int n2;
-        int right;
-        int win_number = 3;
-
-        while (Engine.winCount != win_number) {
-            n1 = Engine.randNumber();
-            n2 = Engine.randNumber();
-            if (n1 > n2) {
-                big = n1;
-                small = n2;
+        for (int i = 0; i < 3; i++) {
+            x1 = Engine.randNumber();
+            x2 = Engine.randNumber();
+            if (x1 > x2) {
+                big = x1;
+                small = x2;
             } else {
-                big = n2;
-                small = n1;
+                big = x2;
+                small = x1;
             }
-            Engine.question(Integer.toString(big), Integer.toString(small));
-            right = gcd(big, small);
-            Engine.answer();
-            String answer = scan.next();
-            if (answer.equals(Integer.toString(right))) {
-                Engine.rightAnswer();
-            }
-            if (!answer.equals(Integer.toString(right))) {
-                Engine.wrongAnswer(Integer.toString(right), answer);
-                break;
-            }
-            if (Engine.winCount == win_number) {
-                Engine.congrats();
-            }
+            task[i][0] = big + " " + small;
+            task[i][1] = gcd(big, small) + "";
         }
+        Engine.game(question, task);
     }
     public static int gcd(int n1, int n2) {
         if (n2 == 0) {

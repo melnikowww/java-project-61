@@ -20,7 +20,7 @@ public class App {
             Cli.meet();
         }
         if (numb.equals("2")) {
-            Even.game();
+            Even.game();       // исправлено
         }
         if (numb.equals("3")) {
             Calc.game();

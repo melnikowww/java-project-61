@@ -8,7 +8,6 @@ public class Engine {
     public static int operation;
     public static long randomNumber;
     public static int winCount = 0;
-    //public static String question;
     public static String name;
     public static void meet() {
         System.out.println("Welcome to the Brain Games!");
@@ -44,10 +43,6 @@ public class Engine {
         randomNumber = round((Math.random() * (stop - start)) + start);
         return (int) randomNumber;
     }
-
-    public static void answer() {
-        System.out.print("Your answer: ");
-    }
     public static void rightAnswer() {
         System.out.println("Correct!");
         winCount++;
@@ -56,28 +51,8 @@ public class Engine {
         System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
         System.out.println("Let's try again, " + Engine.name + "!");
     }
-    /*
-    public static void wrongAnswer(int rightA, int wrongA) {
-        System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
-        System.out.println("Let's try again, " + Engine.name + "!");
-    }
-
-     */
-    public static void incorrectAns() {
-        System.out.println("Incorrect answer ;(.");
-        System.out.println("Let's try again, " + Engine.name);
-    }
     public static void congrats() {
         System.out.println("Congratulations, " + name + "!");
-    }
-    public static void question(String data1) {
-        System.out.println("Question: " + data1);
-    }
-    public static void question(String data1, String data2) {
-        System.out.println("Question: " + data1 + " " + data2);
-    }
-    public static void question(String data1, String data2, String smthElse) {
-        System.out.println("Question: " + data1 + " " + smthElse + " " + data2);
     }
     public static String primeTest(int x) {
         String rightAnswer = "yes";
@@ -88,5 +63,27 @@ public class Engine {
             }
         }
         return rightAnswer;
+    }
+
+    public static void game(String question, String[][] task) {
+        meet();
+        Scanner scan = new Scanner(System.in);
+        String ans;
+        //int winNumber = 3;
+        System.out.println(question);
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Question: " + task[i][0]);
+            System.out.print("Your answer: ");
+            ans = scan.next();
+            if (ans.equals(task[i][1])) {
+                rightAnswer();
+            } else {
+                wrongAnswer(task[i][1], ans);
+                break;
+            }
+            if (winCount == 3) {
+                congrats();
+            }
+        }
     }
 }

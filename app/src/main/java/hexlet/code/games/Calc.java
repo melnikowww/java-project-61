@@ -1,46 +1,27 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class Calc {
     public static void game() {
-        Engine.meet();
-        System.out.println("What is the result of the expression?");
-        Scanner scan = new Scanner(System.in);
-        int firstNumb;
-        int secNumb;
+        String question = "What is the result of the expression?";
+        String[][] task = new String[3][2];
         String op;
-        int right = 0;
-        int win_number = 3;
-        //String eq;
-        while (Engine.winCount != win_number) {
-            firstNumb = Engine.randNumber();
-            secNumb = Engine.randNumber();
+
+        for (int i = 0; i < 3; i++) {
             op = Engine.operation();
-            Engine.question(Integer.toString(firstNumb), Integer.toString(secNumb), op);
+            int x1 = Engine.randNumber();
+            int x2 = Engine.randNumber();
+            task[i][0] = x1 + op + x2;
             if (op.equals("+")) {
-                right = firstNumb + secNumb;
+                task[i][1] = x1 + x2 + "";
             }
             if (op.equals("-")) {
-                right = firstNumb - secNumb;
+                task[i][1] = x1 - x2 + "";
             }
             if (op.equals("*")) {
-                right = firstNumb * secNumb;
-            }
-            Engine.answer();
-            String answer = scan.next();
-            if (answer.equals(Integer.toString(right))) {
-                Engine.rightAnswer();
-            }
-            if (!answer.equals(Integer.toString(right))) {
-                Engine.wrongAnswer(Integer.toString(right), answer);
-                break;
-            }
-            if (Engine.winCount == win_number) {
-                Engine.congrats();
+                task[i][1] = x1 * x2 + "";
             }
         }
+        Engine.game(question, task);
     }
 }
