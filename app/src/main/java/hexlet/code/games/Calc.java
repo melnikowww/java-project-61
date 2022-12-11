@@ -11,7 +11,7 @@ public class Calc {
             op = Engine.operation();
             int x1 = Engine.randNumber();
             int x2 = Engine.randNumber();
-            task[i][0] = x1 + op + x2;
+            task[i][0] = x1 + " " + op + " " + x2;
             if (op.equals("+")) {
                 task[i][1] = x1 + x2 + "";
             }
