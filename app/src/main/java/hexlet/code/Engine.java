@@ -6,9 +6,9 @@ import static java.lang.Math.round;
 
 public class Engine {
     private static String name;
-    public static final int stepNumber = 3;
-    public static final int rowNumber = 3;
-    public static final int columnNumber = 2;
+    public static final int S = 3;
+    public static final int R = 3;
+    public static final int C = 2;
     public static void meet() {
         System.out.println("Welcome to the Brain Games!");
         Scanner scan = new Scanner(System.in);
@@ -33,9 +33,9 @@ public class Engine {
     }
     public static int randNumber() {
         long randomNumber;
-        int maxNumber = 100;
+        final int maxSize = 100;
 
-        randomNumber = round(Math.random() * maxNumber);
+        randomNumber = round(Math.random() * maxSize);
         return (int) randomNumber;
     }
     public static int randNumber(int size) {
@@ -75,7 +75,7 @@ public class Engine {
         Scanner scan = new Scanner(System.in);
         String ans;
         System.out.println(question);
-        for (int i = 0; i < stepNumber; i++) {
+        for (int i = 0; i < S; i++) {
             System.out.println("Question: " + task[i][0]);
             System.out.print("Your answer: ");
             ans = scan.next();
