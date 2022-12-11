@@ -81,9 +81,7 @@ public class Engine {
                 wrongAnswer(task[i][1], ans);
                 break;
             }
-            if (winCount == 3) {
-                congrats();
-            }
+            congrats();
         }
     }
 }
