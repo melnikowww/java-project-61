@@ -13,16 +13,16 @@ public class Progression {
 
         for (int i = 0; i < 3; i++) {
             startNumber = Engine.randNumber();
-            step = Engine.randNumber(10);
+            step = Engine.randNumber(1, 10);
             sizeOfProgression = Engine.randNumber(5, 10);
             secretPlace = Engine.randNumber(sizeOfProgression);
             task[i][0] = "";
 
             int[] progression = new int[sizeOfProgression];
-            for (int j = 1; j < sizeOfProgression; j++) {
+            for (int j = 0; j < sizeOfProgression; j++) {
                 progression[j] = startNumber + j * step;
             }
-            for (int j = 1; j < sizeOfProgression; j++) {
+            for (int j = 0; j < sizeOfProgression; j++) {
                 if (j == secretPlace) {
                     task[i][0] = task[i][0] + ".." + " ";
                     task[i][1] = progression[j] + "";
