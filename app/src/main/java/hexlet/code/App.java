@@ -17,7 +17,7 @@ public class App {
         String numb = scan.next();
 
         if (numb.equals("1")) {
-            Cli.meet();
+            Engine.meet();
         }
         if (numb.equals("2")) {
             Even.game();       // исправлено

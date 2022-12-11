@@ -19,10 +19,10 @@ public class Progression {
             task[i][0] = "";
 
             int[] progression = new int[sizeOfProgression];
-            for (int j = 0; j < sizeOfProgression; j++) {
+            for (int j = 1; j < sizeOfProgression; j++) {
                 progression[j] = startNumber + j * step;
             }
-            for (int j = 0; j < sizeOfProgression; j++) {
+            for (int j = 1; j < sizeOfProgression; j++) {
                 if (j == secretPlace) {
                     task[i][0] = task[i][0] + ".." + " ";
                     task[i][1] = progression[j] + "";
