@@ -29,7 +29,7 @@ public class Prime {
     }
     */
     public static void game() {
-        String question = "Answer 'yes' if the number is prime. Otherwise answer 'no'.";
+        String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] task = new String[3][2];
 
         for (int i = 0; i < 3; i++) {
