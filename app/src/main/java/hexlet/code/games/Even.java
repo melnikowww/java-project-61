@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 
 public class Even {
     public static void game() {
-        String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] task = new String[Engine.R][Engine.C];
 
         for (int i = 0; i < Engine.S; i++) {
@@ -15,7 +14,7 @@ public class Even {
                 task[i][1] = "no";
             }
         }
-        Engine.game(question, task);
+        Engine.game("Answer 'yes' if the number is even, otherwise answer 'no'.", task);
     }
 }
 

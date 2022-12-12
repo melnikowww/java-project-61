@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 
 public class Progression {
     public static void game() {
-        String question = "What number is missing in the progression?";
         String[][] task = new String[Engine.R][Engine.C];
         int startNumber;
         int step;
@@ -19,22 +18,25 @@ public class Progression {
             startNumber = Engine.randNumber();
             step = Engine.randNumber(minStep, maxStep);
             sizeOfProgression = Engine.randNumber(minSize, maxSize);
-            secretPlace = Engine.randNumber(sizeOfProgression);
+            secretPlace = Engine.randNumber(0, sizeOfProgression - 1);
             task[i][0] = "";
 
             int[] progression = new int[sizeOfProgression];
+            //progression[0] = startNumber;
             for (int j = 0; j < sizeOfProgression; j++) {
                 progression[j] = startNumber + j * step;
             }
             for (int j = 0; j < sizeOfProgression; j++) {
                 if (j == secretPlace) {
                     task[i][0] = task[i][0] + ".." + " ";
+                    //System.out.println(task[i][0]);
                     task[i][1] = progression[j] + "";
+                    //System.out.println(task[i][1]);
                     continue;
                 }
                 task[i][0] = task[i][0] + progression[j] + " ";
             }
         }
-        Engine.game(question, task);
+        Engine.game("What number is missing in the progression?", task);
     }
 }

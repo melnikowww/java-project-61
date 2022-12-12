@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 public class Calc {
     public static void game() {
-        String question = "What is the result of the expression?";
         String[][] task = new String[Engine.R][Engine.C];
         String op;
 
@@ -22,6 +21,6 @@ public class Calc {
                 task[i][1] = x1 * x2 + "";
             }
         }
-        Engine.game(question, task);
+        Engine.game("What is the result of the expression?", task);
     }
 }
