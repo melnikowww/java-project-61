@@ -44,7 +44,7 @@ public class Utils {
         return Integer.parseInt(data) % 2 == 0;
     }
 
-    public static String [] makeProgression(int minX, int maxX, int minSize, int maxSize, int minStep, int maxStep) {
+    public static String[] makeProgression(int minX, int maxX, int minSize, int maxSize, int minStep, int maxStep) {
         int startNumber;
         int step;
         int sizeOfProgression;

@@ -4,13 +4,13 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    private static final int minX = 0;
-    private static final int maxX = 100;
-    private static final int minStep = 1;
-    private static final int maxStep = 10;
-    private static final int minSize = 5;
-    private static final int maxSize = 10;
-    private static final String quest = "What number is missing in the progression?";
+    private static final int MIN_X = 0;
+    private static final int MAX_X = 100;
+    private static final int MIN_STEP = 1;
+    private static final int MAX_STEP = 10;
+    private static final int MIN_SIZE = 5;
+    private static final int MAX_SIZE = 10;
+    private static final String Q = "What number is missing in the progression?";
 
 
     public static void game() {
@@ -19,11 +19,11 @@ public class Progression {
         String[] progression;
 
         for (int i = 0; i < Engine.S; i++) {
-            progression = Utils.makeProgression(minX, maxX, minSize, maxSize, minStep, maxStep);
-            secretPlace = Utils.generateNumber(1, progression.length - 1);
-            task[i][1] = progression[secretPlace - 1] + "";
-            task[i][0] = String.join(" ", progression).replace(" " + task[i][1] + " ", " .. ");
+            progression = Utils.makeProgression(MIN_X, MAX_X, MIN_SIZE, MAX_SIZE, MIN_STEP, MAX_STEP);
+            secretPlace = Utils.generateNumber(0, progression.length - 1);
+            task[i][1] = progression[secretPlace] + "";
+            task[i][0] = String.join(" ", progression).replace(task[i][1] + " ", ".. ");
         }
-        Engine.game(quest, task);
+        Engine.game(Q, task);
     }
 }
