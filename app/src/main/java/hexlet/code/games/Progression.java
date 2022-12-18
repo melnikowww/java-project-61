@@ -26,8 +26,7 @@ public class Progression {
             }
              */
             //System.out.println();
-            secretPlace = 3;
-                //Utils.generateNumber(0, progression.length - 1);
+            secretPlace = Utils.generateNumber(0, 4);
             //System.out.println(secretPlace);
             task[i][1] = progression[secretPlace];
             //System.out.println(task[i][1]);
