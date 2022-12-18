@@ -20,7 +20,7 @@ public class Progression {
 
         for (int i = 0; i < Engine.S; i++) {
             progression = Utils.makeProgression(minX, maxX, minSize, maxSize, minStep, maxStep);
-            secretPlace = Utils.generateNumber(0, progression.length - 1);
+            secretPlace = Utils.generateNumber(1, progression.length - 1);
             task[i][1] = progression[secretPlace] + "";
             task[i][0] = String.join(" ", progression).replace(" " + task[i][1] + " ", " .. ");
         }
