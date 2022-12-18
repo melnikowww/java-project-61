@@ -17,10 +17,10 @@ public class App {
         String numb = scan.next();
 
         if (numb.equals("1")) {
-            Engine.meet();
+            Cli.meet();
         }
         if (numb.equals("2")) {
-            Even.game();       // исправлено
+            Even.game();
         }
         if (numb.equals("3")) {
             Calc.game();

@@ -1,16 +1,22 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 public class GCD {
+    private static final int minX = 0;
+    private static final int maxX = 100;
+    private static final String quest = "Find the greatest common divisor of given numbers.";
+
     public static void game() {
-        String[][] task = new String[Engine.R][Engine.C];
+        String[][] task = new String[Engine.S][2];
         int x1;
         int x2;
         int big;
         int small;
         for (int i = 0; i < Engine.S; i++) {
-            x1 = Engine.randNumber();
-            x2 = Engine.randNumber();
+            x1 = Utils.generateNumber(minX, maxX);
+            x2 = Utils.generateNumber(minX, maxX);
             if (x1 > x2) {
                 big = x1;
                 small = x2;
@@ -19,14 +25,8 @@ public class GCD {
                 small = x1;
             }
             task[i][0] = big + " " + small;
-            task[i][1] = gcd(big, small) + "";
+            task[i][1] = Utils.gcd(big, small) + "";
         }
-        Engine.game("Find the greatest common divisor of given numbers.", task);
-    }
-    public static int gcd(int n1, int n2) {
-        if (n2 == 0) {
-            return n1;
-        }
-        return gcd(n2, n1 % n2);
+        Engine.game(quest, task);
     }
 }
