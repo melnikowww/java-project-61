@@ -20,8 +20,16 @@ public class Progression {
 
         for (int i = 0; i < Engine.S; i++) {
             progression = Utils.makeProgression(MIN_X, MAX_X, MIN_SIZE, MAX_SIZE, MIN_STEP, MAX_STEP);
+            /*
+            for (int j = 0; j < progression.length; j++) {
+                System.out.print(progression[j] + " ");
+            }
+             */
+            //System.out.println();
             secretPlace = Utils.generateNumber(0, progression.length - 1);
+            //System.out.println(secretPlace);
             task[i][1] = progression[secretPlace];
+            //System.out.println(task[i][1]);
             task[i][0] = String.join(" ", progression).replace(task[i][1] + " ", ".. ");
         }
         Engine.game(Q, task);
