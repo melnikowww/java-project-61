@@ -26,11 +26,11 @@ public class Progression {
             }
              */
             //System.out.println();
-            secretPlace = Utils.generateNumber(0, progression.length - 2);
+            secretPlace = Utils.generateNumber(0, progression.length - 1);
             //System.out.println(secretPlace);
             task[i][1] = progression[secretPlace];
             //System.out.println(task[i][1]);
-            task[i][0] = String.join(" ", progression).replace(task[i][1] + " ", ".. ");
+            task[i][0] = (String.join(" ", progression) + " ").replace(task[i][1] + " ", ".. ");
         }
         Engine.game(Q, task);
     }
