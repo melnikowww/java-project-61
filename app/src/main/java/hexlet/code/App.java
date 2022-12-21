@@ -16,23 +16,31 @@ public class App {
         System.out.print("Your choice: ");
         String numb = scan.next();
 
-        if (numb.equals("1")) {
-            Cli.meet();
-        }
-        if (numb.equals("2")) {
-            Even.game();
-        }
-        if (numb.equals("3")) {
-            Calc.game();
-        }
-        if (numb.equals("4")) {
-            GCD.game();
-        }
-        if (numb.equals("5")) {
-            Progression.game();
-        }
-        if (numb.equals("6")) {
-            Prime.game();
+        switch (numb) {
+            case "1": {
+                Cli.meet();
+                break;
+            }
+            case "2": {
+                Even.game();
+                break;
+            }
+            case "3": {
+                Calc.game();
+                break;
+            }
+            case "4": {
+                GCD.game();
+                break;
+            }
+            case "5": {
+                Progression.game();
+                break;
+            }
+            case "6": {
+                Prime.game();
+                break;
+            }
         }
     }
 }

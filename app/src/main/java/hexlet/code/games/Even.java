@@ -9,13 +9,16 @@ public class Even {
     private static final String Q = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void game() {
-        String[][] task = new String[Engine.S][2];
+        String[][] task = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.S; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             task[i][0] = Utils.generateNumber(MIN_X, MAX_X) + "";
-            task[i][1] = Utils.isEven(task[i][0]) ? "yes" : "no";
+            task[i][1] = isEven(task[i][0]) ? "yes" : "no";
         }
         Engine.game(Q, task);
+    }
+    public static boolean isEven(String data) {
+        return Integer.parseInt(data) % 2 == 0;
     }
 }
 

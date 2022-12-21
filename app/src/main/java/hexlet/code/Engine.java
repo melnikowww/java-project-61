@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     private static String name;
-    public static final int S = 3;
+    public static final int ROUNDS = 3;
 
     public static void game(String question, String[][] task) {
         System.out.println("Welcome to the Brain Games!");
@@ -14,27 +14,33 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         String ans;
         System.out.println(question);
-        for (int i = 0; i < S; i++) {
+        /*
+        for (int i = 0; i < ROUNDS; i++) {
             System.out.println("Question: " + task[i][0]);
             System.out.print("Your answer: ");
             ans = scan.next();
             if (ans.equals(task[i][1])) {
-                rightAnswer();
+                System.out.println("Correct!");
             } else {
-                wrongAnswer(task[i][1], ans);
-                break;
+                System.out.println("'" + ans + "'" + " is wrong answer ;(. Correct answer was " + "'" + task[i][1] + "'");
+                System.out.println("Let's try again, " + Engine.name + "!");
+                return;
             }
-            congrats();
         }
-    }
-    public static void rightAnswer() {
-        System.out.println("Correct!");
-    }
-    public static void wrongAnswer(String rightA, String wrongA) {
-        System.out.println("'" + wrongA + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightA + "'");
-        System.out.println("Let's try again, " + Engine.name + "!");
-    }
-    public static void congrats() {
-        System.out.println("Congratulations, " + name + "!");
+
+         */
+        for (String[] round : task) {
+            System.out.println("Question: " + round[0]);
+            System.out.print("Your answer: ");
+            ans = scan.next();
+            if (ans.equals(round[1])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + ans + "'" + " is wrong answer ;(. Correct answer was " + "'" + round[1] + "'");
+                System.out.println("Let's try again, " + Engine.name + "!");
+                return;
+            }
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 }
