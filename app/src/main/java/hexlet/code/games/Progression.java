@@ -24,7 +24,7 @@ public class Progression {
 
             secretPlace = Utils.generateNumber(0, progression.length - 1);
             task[i][1] = progression[secretPlace];
-            task[i][0] = (String.join(" ", progression) + " ").replace( task[i][1] + " ", ".. ");
+            task[i][0] = (String.join(" ", progression) + " ").replace(task[i][1] + " ", ".. ");
         }
         Engine.game(Q, task);
     }

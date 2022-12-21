@@ -30,7 +30,8 @@ public class Calc {
                 case '*':
                     task[i][1] = x1 * x2 + "";
                     break;
-
+                default:
+                    break;
             }
         }
         Engine.game(Q, task);
