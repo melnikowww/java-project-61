@@ -19,18 +19,18 @@ public class Calc {
             int x2 = Utils.generateNumber(MIN_X, MAX_X);
             task[i][0] = x1 + " " + op + " " + x2;
             switch (op) {
-                case '+': {
+                case '+':
                     task[i][1] = x1 + x2 + "";
                     break;
-                }
-                case '-': {
+
+                case '-':
                     task[i][1] = x1 - x2 + "";
                     break;
-                }
-                case '*': {
+
+                case '*':
                     task[i][1] = x1 * x2 + "";
                     break;
-                }
+
             }
         }
         Engine.game(Q, task);
