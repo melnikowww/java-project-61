@@ -15,7 +15,6 @@ public class App {
         System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
         String numb = scan.next();
-
         switch (numb) {
             case "1":
                 Cli.meet();
@@ -43,7 +42,6 @@ public class App {
 
             default:
                 throw new RuntimeException("Unknown input: " + numb);
-
         }
     }
 }

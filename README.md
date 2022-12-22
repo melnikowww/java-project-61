@@ -6,3 +6,5 @@
 [GCD_Game](https://asciinema.org/a/EsURx3TatKSMnJyjXex76OGL8)
 [Progression_Game](https://asciinema.org/a/Dq5FDcFYA1hIhwXAeDTHGBhOR)
 [Prime_Game](https://asciinema.org/a/EYtAeQq3gVI45Qsi1SudwZL0d)
+
+This project is provided by Hexlet like a first project. Here we create simple games and learn how the coding works. At this moment you can play such games like "Even", "Calculator", "Progression", "GCD" and "Prime". Enjoy! :)
