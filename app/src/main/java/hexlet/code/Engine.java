@@ -3,10 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static String name;
-    public static final int ROUNDS = 3;
-
+        public static final int ROUNDS = 3;
     public static void game(String question, String[][] task) {
+        String name;
         System.out.println("Welcome to the Brain Games!");
         Scanner scan = new Scanner(System.in);
         System.out.print("May I have your name? ");
@@ -23,7 +22,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + ans + "'" + " is wrong answer ;(. Correct answer was " + "'" + round[1] + "'");
-                System.out.println("Let's try again, " + Engine.name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }

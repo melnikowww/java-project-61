@@ -16,30 +16,26 @@ public class App {
         System.out.print("Your choice: ");
         String numb = scan.next();
         switch (numb) {
+            case "0":
+                break;
             case "1":
                 Cli.meet();
                 break;
-
             case "2":
                 Even.game();
                 break;
-
             case "3":
                 Calc.game();
                 break;
-
             case "4":
                 GCD.game();
                 break;
-
             case "5":
                 Progression.game();
                 break;
-
             case "6":
                 Prime.game();
                 break;
-
             default:
                 throw new RuntimeException("Unknown input: " + numb);
         }

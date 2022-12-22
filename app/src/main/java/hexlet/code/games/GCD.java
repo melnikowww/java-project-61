@@ -11,19 +11,10 @@ public class GCD {
     public static void game() {
         String[][] task = new String[Engine.ROUNDS][2];
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int big;
-            int small;
-            int x1 = Utils.generateNumber(MIN_X, MAX_X);
-            int x2 = Utils.generateNumber(MIN_X, MAX_X);
-            if (x1 > x2) {
-                big = x1;
-                small = x2;
-            } else {
-                big = x2;
-                small = x1;
-            }
-            task[i][0] = big + " " + small;
-            task[i][1] = gcd(big, small) + "";
+            int number1 = Utils.generateNumber(MIN_X, MAX_X);
+            int number2 = Utils.generateNumber(MIN_X, MAX_X);
+            task[i][0] = number1 + " " + number2;
+            task[i][1] = gcd(number1, number2) + "";
         }
         Engine.game(Q, task);
     }

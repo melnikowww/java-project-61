@@ -14,10 +14,10 @@ public class Calc {
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
             char op = OPERATION[Utils.generateNumber(0, 2)];
-            int x1 = Utils.generateNumber(MIN_X, MAX_X);
-            int x2 = Utils.generateNumber(MIN_X, MAX_X);
-            task[i][1] = calculate(op, x1, x2);
-            task[i][0] = x1 + " " + op + " " + x2;
+            int number1 = Utils.generateNumber(MIN_X, MAX_X);
+            int number2 = Utils.generateNumber(MIN_X, MAX_X);
+            task[i][1] = calculate(op, number1, number2);
+            task[i][0] = number1 + " " + op + " " + number2;
         }
         Engine.game(Q, task);
     }

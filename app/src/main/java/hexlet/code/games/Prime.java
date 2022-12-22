@@ -18,13 +18,14 @@ public class Prime {
         Engine.game(Q, task);
     }
     public static boolean isPrime(int x) {
-        boolean rightAnswer = true;
+        if (x < 2) {
+            return false;
+        }
         for (int i = 2; i < x; i++) {
             if (x % i == 0) {
-                rightAnswer = false;
-                break;
+                return false;
             }
         }
-        return rightAnswer;
+        return true;
     }
 }
