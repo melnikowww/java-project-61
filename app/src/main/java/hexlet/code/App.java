@@ -42,7 +42,7 @@ public class App {
                 break;
 
             default:
-                break;
+                throw new RuntimeException("Unknown input: " + numb);
 
         }
     }

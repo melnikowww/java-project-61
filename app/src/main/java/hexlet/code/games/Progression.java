@@ -21,10 +21,10 @@ public class Progression {
             int startNumber = Utils.generateNumber(MIN_X, MAX_X);
             int step = Utils.generateNumber(MIN_STEP, MAX_STEP);
             progression = makeProgression(startNumber, PROGRESSION_SIZE, step);
-
             secretPlace = Utils.generateNumber(0, progression.length - 1);
             task[i][1] = progression[secretPlace];
-            task[i][0] = (String.join(" ", progression) + " ").replace(task[i][1] + " ", ".. ");
+            progression[secretPlace] = "..";
+            task[i][0] = String.join(" ", progression);
         }
         Engine.game(Q, task);
     }

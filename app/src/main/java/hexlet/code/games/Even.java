@@ -13,12 +13,12 @@ public class Even {
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
             task[i][0] = Utils.generateNumber(MIN_X, MAX_X) + "";
-            task[i][1] = isEven(task[i][0]) ? "yes" : "no";
+            task[i][1] = isEven(Integer.parseInt(task[i][0])) ? "yes" : "no";
         }
         Engine.game(Q, task);
     }
-    public static boolean isEven(String data) {
-        return Integer.parseInt(data) % 2 == 0;
+    public static boolean isEven(int data) {
+        return data % 2 == 0;
     }
 }
 

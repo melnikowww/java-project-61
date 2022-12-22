@@ -11,29 +11,33 @@ public class Calc {
 
     public static void game() {
         String[][] task = new String[Engine.ROUNDS][2];
-        char op;
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            op = OPERATION[Utils.generateNumber(0, 2)];
+            char op = OPERATION[Utils.generateNumber(0, 2)];
             int x1 = Utils.generateNumber(MIN_X, MAX_X);
             int x2 = Utils.generateNumber(MIN_X, MAX_X);
+            task[i][1] = calculate(op, x1, x2);
             task[i][0] = x1 + " " + op + " " + x2;
-            switch (op) {
-                case '+':
-                    task[i][1] = x1 + x2 + "";
-                    break;
-
-                case '-':
-                    task[i][1] = x1 - x2 + "";
-                    break;
-
-                case '*':
-                    task[i][1] = x1 * x2 + "";
-                    break;
-                default:
-                    break;
-            }
         }
         Engine.game(Q, task);
+    }
+    private static String calculate(char operation, int x1, int x2) {
+        String result;
+        switch (operation) {
+            case '+':
+                result = x1 + x2 + "";
+                break;
+
+            case '-':
+                result = x1 - x2 + "";
+                break;
+
+            case '*':
+                result = x1 * x2 + "";
+                break;
+            default:
+                throw new RuntimeException("Unknown operation: " + operation);
+        }
+        return result;
     }
 }

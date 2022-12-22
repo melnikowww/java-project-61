@@ -26,7 +26,7 @@ public class Engine {
                 System.out.println("Let's try again, " + Engine.name + "!");
                 return;
             }
-            System.out.println("Congratulations, " + name + "!");
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 }
