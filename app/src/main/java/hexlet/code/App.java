@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
-        String numb = scan.next();
-        switch (numb) {
+        String choice = scanner.next();
+        switch (choice) {
             case "0":
                 break;
             case "1":
@@ -37,8 +37,9 @@ public class App {
                 Prime.game();
                 break;
             default:
-                throw new RuntimeException("Unknown input: " + numb);
+                throw new RuntimeException("Unknown input: " + choice);
         }
+        scanner.close();
     }
 }
 

@@ -3,13 +3,14 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-        public static final int ROUNDS = 3;
+
+    public static final int ROUNDS = 3;
+
     public static void game(String question, String[][] task) {
-        String name;
         System.out.println("Welcome to the Brain Games!");
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("May I have your name? ");
-        name = scan.next();
+        String name = scanner.next();
         System.out.println("Hello, " + name + "!");
         String ans;
         System.out.println(question);
@@ -17,7 +18,7 @@ public class Engine {
         for (String[] round : task) {
             System.out.println("Question: " + round[0]);
             System.out.print("Your answer: ");
-            ans = scan.next();
+            ans = scanner.next();
             if (ans.equals(round[1])) {
                 System.out.println("Correct!");
             } else {
@@ -27,5 +28,6 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + name + "!");
+    scanner.close();
     }
 }
